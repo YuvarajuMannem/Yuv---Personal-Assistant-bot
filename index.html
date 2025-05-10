@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuv - Your Personal Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/yuv-avatar.png" alt="Yuv Logo">
+                <h1>Yuv </h1>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <img src="assets/yuv-avatar.png" alt="Yuv" class="chatbot-avatar">
+                        <h2 id="assistant-name">Yuv</h2>
+                        <span class="status-dot"></span>
+                        <span class="status">Online</span>
+                    </div>
+                    <div class="chat-actions">
+                        <button id="clear-chat" title="Clear Conversation"><i class="fas fa-trash"></i></button>
+                        <button id="help-btn" title="Help"><i class="fas fa-question-circle"></i></button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages"></div>
+                
+                <div class="chat-input">
+                    <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+                    <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                    <button id="voice-btn"><i class="fas fa-microphone"></i></button>
+                </div>
+            </div>
+
+            <div class="features-panel">
+                <h3>Quick Actions</h3>
+                <div class="quick-actions">
+                    <button class="feature-btn" data-feature="weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span>Weather</span>
+                    </button>
+                    <button class="feature-btn" data-feature="reminder">
+                        <i class="fas fa-bell"></i>
+                        <span>Reminder</span>
+                    </button>
+                    <button class="feature-btn" data-feature="calculator">
+                        <i class="fas fa-calculator"></i>
+                        <span>Calculator</span>
+                    </button>
+                    <button class="feature-btn" data-feature="todo">
+                        <i class="fas fa-tasks"></i>
+                        <span>To-Do List</span>
+                    </button>
+                    <button class="feature-btn" data-feature="notes">
+                        <i class="fas fa-sticky-note"></i>
+                        <span>Notes</span>
+                    </button>
+                    <button class="feature-btn" data-feature="joke">
+                        <i class="fas fa-laugh-squint"></i>
+                        <span>Tell a Joke</span>
+                    </button>
+                </div>
+
+                <div class="personal-info" id="personal-info-container"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Yuv Personal Assistant. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div class="modal" id="help-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Yuv Assistant Help</h2>
+            <div class="help-content">
+                <h3>Available Commands:</h3>
+                <ul>
+                    <li><strong>Ask anything</strong> - I'll find the answer from the web</li>
+                    <li><strong>Weather</strong> - Get weather information</li>
+                    <li><strong>Reminder</strong> - Set a reminder</li>
+                    <li><strong>Calculate</strong> - Perform calculations</li>
+                    <li><strong>To-Do</strong> - Manage your tasks</li>
+                    <li><strong>Note</strong> - Take and save notes</li>
+                    <li><strong>Joke</strong> - Hear a random joke</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
